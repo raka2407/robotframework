@@ -18,7 +18,7 @@ ENV ROBOT_FRAMEWORK_VERSION 3.0.4
 ENV ROBOT_FRAMEWORK_REQUESTS_VERSION 0.5.0
 ENV APPIUM_VERSION 1.4.6
 
-#ENV PYTHONPATH /usr/local/bin/python2
+ENV PYTHONPATH /lib
 
 # Install system dependencies
 RUN dnf upgrade -y \
