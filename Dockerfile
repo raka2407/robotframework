@@ -31,7 +31,7 @@ RUN pip2 install \
   requests==$REQUESTS_VERSION \
   robotframework-requests==$ROBOT_FRAMEWORK_REQUESTS_VERSION \
   robotframework-appiumlibrary \
-  6
+  six
 
 
 # Update system path
