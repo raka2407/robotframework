@@ -16,9 +16,8 @@ ENV PYTHON_PIP_VERSION 18.0*
 ENV REQUESTS_VERSION 2.20.0
 ENV ROBOT_FRAMEWORK_VERSION 3.0.4
 ENV ROBOT_FRAMEWORK_REQUESTS_VERSION 0.5.0
-ENV APPIUM_VERSION 1.4.6
 
-ENV PYTHONPATH /lib/python2.7/site-packages
+#ENV PYTHONPATH /lib/python2.7/site-packages
 
 # Install system dependencies
 RUN dnf upgrade -y \
@@ -31,7 +30,7 @@ RUN pip2 install \
   robotframework==$ROBOT_FRAMEWORK_VERSION \
   requests==$REQUESTS_VERSION \
   robotframework-requests==$ROBOT_FRAMEWORK_REQUESTS_VERSION \
-  robotframework-appiumlibrary==$APPIUM_VERSION
+  robotframework-appiumlibrary
 
 
 # Update system path
