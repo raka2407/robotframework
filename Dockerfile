@@ -1,7 +1,7 @@
 FROM fedora:29
 
 MAINTAINER Rakesh Ummadisetty
-LABEL description Robot Framework in Docker.
+LABEL description Robot Framework in Docker version 1.
 
 # Setup volumes for input and output
 VOLUME /opt/robotframework/reports
