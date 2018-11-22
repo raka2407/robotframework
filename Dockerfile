@@ -35,7 +35,7 @@ RUN pip2 install \
 
 
 # Update system path
-ENV PATH=~/Desktop/opt/robotframework/bin:~/Desktop/opt/robotframework/drivers:$PATH
+ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
 
 #RUN robot \
