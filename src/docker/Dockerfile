@@ -1,6 +1,5 @@
 FROM fedora:29
 
-
 MAINTAINER Rakesh Ummadisetty
 LABEL description Robot Framework in Docker version 1.
 
@@ -37,20 +36,26 @@ RUN pip2 install \
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
-FROM ubuntu:15.04
-# Install Java 
-RUN apt-get update && \
-    apt-get upgrade -y && \
-    apt-get install -y  software-properties-common && \
-    add-apt-repository ppa:webupd8team/java -y && \
-    apt-get update && \
-    echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections && \
-    apt-get install -y oracle-java7-installer && \
-    apt-get clean
-    
+# Pull base image.
+FROM dockerfile/ubuntu
 
+# Install Java.
+RUN \
+  echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
+  add-apt-repository -y ppa:webupd8team/java && \
+  apt-get update && \
+  apt-get install -y oracle-java7-installer && \
+  rm -rf /var/lib/apt/lists/* && \
+  rm -rf /var/cache/oracle-jdk7-installer
 
+# Define working directory.
+WORKDIR /data
 
+# Define commonly used JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+
+# Define default command.
+CMD ["bash"]
 #RUN robot \
 #        --outputDir ~/Desktop/opt/robotframework/reports \
 #        ${ROBOT_OPTIONS} \
