@@ -21,7 +21,7 @@ ENV ROBOT_FRAMEWORK_REQUESTS_VERSION 0.5.0
 
 # Install system dependencies
 RUN dnf upgrade -y \
-  && dnf install -y \
+  && dnf install -y wget \
     python2-pip-$PYTHON_PIP_VERSION \
   && dnf clean all
 
