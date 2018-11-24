@@ -37,7 +37,7 @@ RUN pip2 install \
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu:14.04
 
 # Install Java.
 RUN \
