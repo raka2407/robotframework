@@ -1,5 +1,5 @@
 FROM fedora:29
-FROM ubuntu:15.04
+
 
 MAINTAINER Rakesh Ummadisetty
 LABEL description Robot Framework in Docker version 1.
@@ -33,7 +33,11 @@ RUN pip2 install \
   robotframework-requests==$ROBOT_FRAMEWORK_REQUESTS_VERSION \
   robotframework-appiumlibrary \
   six
+  
+# Update system path
+ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
+FROM ubuntu:15.04
 # Install Java 
 RUN apt-get update && \
     apt-get upgrade -y && \
@@ -44,8 +48,7 @@ RUN apt-get update && \
     apt-get install -y oracle-java7-installer && \
     apt-get clean
     
-# Update system path
-ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
+
 
 
 #RUN robot \
