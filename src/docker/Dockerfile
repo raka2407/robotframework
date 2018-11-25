@@ -75,8 +75,8 @@ RUN apt-get update \
 #Set working directory
 #WORKDIR ~/opt/robotframework/tests
     
-RUN robot \
-        --outputDir ~Documents/Kitematic/robotframework/opt/robotframework/reports \
-        ${ROBOT_OPTIONS} \
-        ~Documents/Kitematic/robotframework/opt/robotframework/tests
+#RUN robot \
+ #       --outputDir ~Documents/Kitematic/robotframework/opt/robotframework/reports \
+ #      ${ROBOT_OPTIONS} \
+ #       ~Documents/Kitematic/robotframework/opt/robotframework/tests
 
