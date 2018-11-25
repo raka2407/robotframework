@@ -60,7 +60,7 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
-RUN cp ~Documents/Kitematic/robotframework/opt/robotframework/tests ~/opt/robotframework/tests
+#RUN cp ~Documents/Kitematic/robotframework/opt/robotframework/tests ~/opt/robotframework/tests
 #FROM qxf2rohand/qxf2_pom_essentials
 #MAINTAINER Qxf2 Services
  
