@@ -61,7 +61,7 @@ RUN pip2 install \
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
 RUN robot \
-        --outputDir ~/opt/robotframework/reports \
+        --outputDir /opt/robotframework/reports \
         ${ROBOT_OPTIONS} \
-        ~/opt/robotframework/tests
+        /opt/robotframework/tests
 
