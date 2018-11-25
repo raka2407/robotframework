@@ -22,6 +22,7 @@ RUN apt-get update && \
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
 
+
 FROM fedora:29
 
 MAINTAINER Rakesh Ummadisetty
@@ -60,6 +61,16 @@ RUN pip2 install \
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
+#Install git
+RUN apt-get update \
+    && apt-get install -y git
+ 
+#Change directory and clone Qxf2 Public POM repo
+RUN mkdir /opt/robotframework/tests \
+    && cd /opt/robotframework/tests \
+    && git clone https://github.com/raka2407/robotframework.git
+    
+    
 RUN robot \
         --outputDir /opt/robotframework/reports \
         ${ROBOT_OPTIONS} \
