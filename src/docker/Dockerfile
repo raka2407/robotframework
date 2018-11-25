@@ -29,8 +29,8 @@ MAINTAINER Rakesh Ummadisetty
 LABEL description Robot Framework in Docker version 1.
 
 # Setup volumes for input and output
-VOLUME /opt/robotframework/reports
-VOLUME /opt/robotframework/tests
+VOLUME ~/opt/robotframework/reports
+VOLUME ~/opt/robotframework/tests
 
 # Set number of threads for parallel execution
 # By default, no parallelisation
@@ -69,14 +69,14 @@ RUN apt-get update \
     && apt-get install -y git
  
 #Change directory and clone Qxf2 Public POM repo
-RUN cd /opt/robotframework/tests \
+RUN cd ~/opt/robotframework/tests \
     && git clone https://github.com/raka2407/robotframework.git
  
 #Set working directory
-WORKDIR /opt/robotframework/tests
+WORKDIR ~/opt/robotframework/tests
     
 RUN robot \
-        --outputDir /opt/robotframework/reports \
+        --outputDir ~/opt/robotframework/reports \
         ${ROBOT_OPTIONS} \
-        /opt/robotframework/tests
+        ~/opt/robotframework/tests
 
