@@ -64,3 +64,4 @@ ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 #        --outputDir ~/Desktop/opt/robotframework/reports \
 #        ${ROBOT_OPTIONS} \
 #        ~/Desktop/opt/robotframework/tests
+CMD ["/opt/robotframework/tests"]
