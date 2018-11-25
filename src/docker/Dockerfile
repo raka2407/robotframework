@@ -61,6 +61,9 @@ RUN pip2 install \
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
+FROM qxf2rohand/qxf2_pom_essentials
+MAINTAINER Qxf2 Services
+ 
 #Install git
 RUN apt-get update \
     && apt-get install -y git
@@ -69,7 +72,9 @@ RUN apt-get update \
 RUN mkdir /opt/robotframework/tests \
     && cd /opt/robotframework/tests \
     && git clone https://github.com/raka2407/robotframework.git
-    
+ 
+#Set working directory
+WORKDIR /opt/robotframework/tests
     
 RUN robot \
         --outputDir /opt/robotframework/reports \
