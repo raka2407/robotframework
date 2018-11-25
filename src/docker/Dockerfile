@@ -60,9 +60,8 @@ RUN export JAVA_HOME
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
-#RUN robot \
-#        --outputDir ~/Desktop/opt/robotframework/reports \
-#        ${ROBOT_OPTIONS} \
-#        ~/Desktop/opt/robotframework/tests
-ENTRYPOINT echo "Hello, Rakesh"
-ENTRYPOINT docker info
+RUN robot \
+        --outputDir ~/opt/robotframework/reports \
+        ${ROBOT_OPTIONS} \
+        ~/opt/robotframework/tests
+
