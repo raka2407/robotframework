@@ -69,14 +69,14 @@ RUN apt-get update \
     && apt-get install -y git
  
 #Change directory and clone Qxf2 Public POM repo
-RUN cd ~/opt/robotframework/tests \
-    && git clone https://github.com/raka2407/robotframework.git
+#RUN cd ~/opt/robotframework/tests \
+#    && git clone https://github.com/raka2407/robotframework.git
  
 #Set working directory
-WORKDIR ~/opt/robotframework/tests
+#WORKDIR ~/opt/robotframework/tests
     
 RUN robot \
-        --outputDir ~/opt/robotframework/reports \
+        --outputDir ~Documents/Kitematic/robotframework/opt/robotframework/reports \
         ${ROBOT_OPTIONS} \
-        ~/opt/robotframework/tests
+        ~Documents/Kitematic/robotframework/opt/robotframework/tests
 
