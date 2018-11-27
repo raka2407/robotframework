@@ -57,7 +57,7 @@ RUN pip2 install \
   six
 
 # Prepare binaries to be executed
-COPY bin/robot-tests.sh.sh /opt/robotframework/bin/
+COPY bin/robot-tests.sh /opt/robotframework/bin/
 
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
