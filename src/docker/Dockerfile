@@ -8,8 +8,8 @@ RUN apt-get update && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* && \
 	rm -rf /var/cache/oracle-jdk8-installer;
-	
-# Fix certificate issues, found as of 
+
+# Fix certificate issues, found as of
 # https://bugs.launchpad.net/ubuntu/+source/ca-certificates-java/+bug/983302
 RUN apt-get update && \
 	apt-get install -y ca-certificates-java && \
@@ -55,10 +55,10 @@ RUN pip2 install \
   robotframework-requests==$ROBOT_FRAMEWORK_REQUESTS_VERSION \
   robotframework-appiumlibrary \
   six
-  
+
 # Prepare binaries to be executed
 COPY bin/run-tests-in-virtual-screen.sh /opt/robotframework/bin/
-  
+
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
 
