@@ -60,6 +60,8 @@ RUN pip2 install \
 COPY /robot-tests.sh /opt/robotframework/bin/
 WORKDIR /opt/robotframework/bin/
 RUN chmod a+x robot-tests.sh
+RUN chmod 777 /opt/robotframework/bin/docker-entrypoint.sh \
+      && ln -s /opt/robotframework/bin/docker-entrypoint.sh /
 
 # Update system path
 ENV PATH=~/opt/robotframework/bin:~/opt/robotframework/drivers:$PATH
