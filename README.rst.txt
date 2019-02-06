@@ -1,4 +1,4 @@
-Robot Framework
+Unified Test Automation Platform [UTAP]
 ===============
 
 .. contents::
@@ -6,6 +6,8 @@ Robot Framework
 
 Introduction
 ------------
+
+Unified Test Automation Platform [UTAP] is aimed at solving the test automation needs of XYZ with primary focus to APIs, Web and Mobile test automation. This platform will consist of Test Automation Framework [TAF] that is built using Robot Framework and External Libraries available in the ecosystem. In addition, the platform also enables CT (Continous Testing) by providing a test environment that is Dockerized. This test environment will also establish necessary connections towards System/Application Under Test (SUT/AUT). Needless to say, the environment is integrated with ALM Octane to feed the automated test results.
 
 `Robot Framework <http://robotframework.org>`_ is a generic open source
 automation framework for acceptance testing, acceptance test driven
@@ -22,42 +24,23 @@ libraries and tools that are developed as separate projects. For more
 information about Robot Framework and the ecosystem, see
 http://robotframework.org.
 
-Robot Framework project is hosted on GitHub_ where you can find source code,
-an issue tracker, and some further documentation. See `<CONTRIBUTING.rst>`__
-if you are interested to contribute. Downloads are hosted on PyPI_, except
-for the standalone JAR distribution that is on `Maven central`_.
 
-Robot Framework development is sponsored by `Robot Framework Foundation
-<http://robotframework.org/foundation>`_.
-
-.. _GitHub: https://github.com/robotframework/robotframework
-.. _PyPI: https://pypi.python.org/pypi/robotframework
-.. _Maven central: http://search.maven.org/#search%7Cga%7C1%7Ca%3Arobotframework
-
-.. image:: https://img.shields.io/pypi/v/robotframework.svg?label=version
-   :target: https://pypi.python.org/pypi/robotframework
-   :alt: Latest version
-
-.. image:: https://img.shields.io/pypi/l/robotframework.svg
-   :target: http://www.apache.org/licenses/LICENSE-2.0.html
-   :alt: License
 
 Installation
 ------------
 
-If you already have Python_ with `pip <http://pip-installer.org>`_ installed,
-you can simply run::
+Prerequisites:
 
-    pip install robotframework
+- `Python Installation
+  <https://www.python.org/downloads/>`_
+  
+- `Eclipse Instllation
+  <https://wiki.eclipse.org/Eclipse/Installation>`_
 
-Alternatively you can get Robot Framework source code by downloading the source
-distribution from PyPI_ and extracting it, or by cloning the project repository
-from GitHub_. After that you can install the framework with::
+- `Eclipse RED Plugin Installation
+  <https://marketplace.eclipse.org/content/red-robot-editor>`_
 
-    python setup.py install
-
-For more detailed installation instructions, including installing Python,
-Jython, IronPython and PyPy or installing from git, see `<INSTALL.rst>`__.
+TAF can be installed by cloning the project from this repository.
 
 Example
 -------
@@ -87,12 +70,9 @@ http://robotframework.org.
 Usage
 -----
 
-Starting from Robot Framework 3.0, tests are executed from the command line
-using the ``robot`` script or by executing the ``robot`` module directly
-like ``python -m robot`` or ``jython -m robot``.
+Tests can be executed from the command line using the ``robot`` script or by executing the ``robot`` module directly like ``python -m robot`` or ``jython -m robot``.
 
-The basic usage is giving a path to a test (or task) file or directory as an
-argument with possible command line options before the path::
+The basic usage is giving a path to a test (or task) file or directory as anargument with possible command line options before the path::
 
     robot tests.robot
     robot --variable HOST:example.com --outputdir results path/to/tests/
@@ -108,8 +88,10 @@ line usage. For a complete reference manual see `Robot Framework User Guide`_.
 Documentation
 -------------
 
-- `Robot Framework User Guide
+- `Test Automation Framework User Guide
   <http://robotframework.org/robotframework/#user-guide>`_
+- `Drivers with Keywords
+  <http://robotframework.org/robotframework/#standard-libraries>`_
 - `Standard libraries
   <http://robotframework.org/robotframework/#standard-libraries>`_
 - `Built-in tools
@@ -129,14 +111,3 @@ Support and contact
   IRC channel on freenode
 - `@robotframework <https://twitter.com/robotframework>`_ on Twitter
 - `Other forums <http://robotframework.org/#support>`_
-
-License
--------
-
-Robot Framework is open source software provided under the `Apache License
-2.0`__. Robot Framework documentation and other similar content use the
-`Creative Commons Attribution 3.0 Unported`__ license. Most libraries and tools
-in the ecosystem are also open source, but they may use different licenses.
-
-__ http://apache.org/licenses/LICENSE-2.0
-__ http://creativecommons.org/licenses/by/3.0
