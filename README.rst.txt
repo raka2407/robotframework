@@ -104,10 +104,6 @@ Documentation
 Support and contact
 -------------------
 
-- `robotframework-users
+- `utap-users
   <https://groups.google.com/group/robotframework-users/>`_ mailing list
-- `Slack <https://robotframework-slack-invite.herokuapp.com>`_ community
-- `#robotframework <http://webchat.freenode.net/?channels=robotframework&prompt=1>`_
-  IRC channel on freenode
-- `@robotframework <https://twitter.com/robotframework>`_ on Twitter
-- `Other forums <http://robotframework.org/#support>`_
+- `Slack #test-automation <https://robotframework-slack-invite.herokuapp.com>`_ channel
