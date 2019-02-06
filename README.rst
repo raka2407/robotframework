@@ -46,7 +46,7 @@ Prerequisites:
 
 TAF can be installed by cloning the project from this repository.
 
-Example
+Web Test Automation Example
 -------
 
 Below is a simple example test case for testing login to some system. More examples are available in examples folder in this project.
@@ -61,6 +61,18 @@ Below is a simple example test case for testing login to some system. More examp
         Submit Credentials
         Welcome Page Should Be Open
         [Teardown]    Close Browser
+
+API Test Automation Example
+-------
+
+Below is a simple example test case for testing REST api service. More examples are available in examples folder in this project.
+
+.. code:: robotframework
+
+    *** Test Cases ***
+    Valid Return Code
+        GET Request    url    resourcePath    headers
+        Verify Response Code    200
 
 Usage
 -----
